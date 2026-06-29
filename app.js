@@ -1,10 +1,10 @@
-import express, { static } from 'express';
+import express from 'express';
 const app = express();
 
 // get the port from env variable
 const PORT = process.env.PORT || 5001;
 
-app.use(static('dist'));
+app.use(express.static('dist'));
 
 const start = async () => {
   await app.listen(PORT)
