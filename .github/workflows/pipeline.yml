@@ -8,8 +8,8 @@ on:
       branches: [main]
       types: [opened, synchronize]
 jobs:
-  if: ${{ github.event_name == 'push' }}
   simple_deployment_pipeline:
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
